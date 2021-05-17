@@ -1,0 +1,378 @@
+<html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> getprice.io </title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+<script src="myscripts.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+<link rel="manifest" href="favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+<style>
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #e6e6e6
+  overflow-y: hidden;
+}
+
+@media (min-width: 991.98px) {
+body {
+height: 100%; overflow: hidden
+}
+}
+
+
+.navbar {
+    transition: all 0.4s;
+}
+
+.navbar .nav-link {
+color: #fff;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: lightgrey;
+    text-decoration: none;
+}
+
+.navbar .navbar-brand {
+}
+
+/* Change navbar styling on scroll */
+.navbar.active {
+    background: #fff;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.active .nav-link {
+    color: #555;
+}
+
+.navbar.active .nav-link:hover,
+.navbar.active .nav-link:focus {
+    color: #555;
+    text-decoration: none;
+}
+
+.navbar.active .navbar-brand {
+    color: #505;
+}
+
+/* Change navbar styling on small viewports */
+@media (max-width: 991.98px) {
+    .navbar {
+        background: #fff;
+    }
+
+    .navbar .navbar-brand, .navbar .nav-link {
+        color: #555;
+    }
+}
+
+.headerimage {
+    width:100%;
+    object-fit: cover;
+}
+
+@media (max-width: 991.98px) {
+.headerimage {
+    width:110%;
+}
+}
+
+.email1 {
+    width: 50%;
+}
+
+
+#myUL {
+  position: absolute;
+  top: 61%;
+  left: 21%;
+  width: 450px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 991.98px) {
+#myUL {
+  position: absolute;
+  top: 40%;
+  left: 8%;
+  width: 80%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+</style>
+
+
+<nav class="navbar navbar-expand-lg fixed-top py-3">
+        <div class="container"><a href="https://getprice.io/" style="color: #004d9a;" class="navbar-brand font-weight-bold"><img style="vertical-align: baseline;" src="icon/logo1.png" width="180" height="52"></a>
+            <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
+            
+            <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a href="#" class="nav-link font-weight"> Ranking <span class="sr-only">(current)</span></a></li>
+                    <li class="nav-item"><a href="btc.html" class="nav-link font-weight"> Wallet Generator</a></li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             Exchange
+                            </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="https://www.binance.cc/en/register?ref=85159588"> Binance (Free Registration) </a>
+                             <a class="dropdown-item" href="#"> Coinbase </a>
+                            <a class="dropdown-item" href="#"> Kraken </a>
+                            <a class="dropdown-item" href="#"> crypto.com </a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link font-weight"> Contact </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+        </header>
+</head>
+        
+
+<body>
+
+<div class="containerbig">
+ <div id="ImageContainerr">
+    <img class="worldimage" style="height: 100%;" src="header1.png" onclick="document.getElementById('myUL').style.visibility = 'hidden';" class="headerimage" />
+    </div>
+</div>
+
+
+<div class="containerdevice">
+ <div id="containerdevice">
+    <img style="height: 550px; width: 290px;" src="iphone.png" class="deviceimage" />
+    </div>
+</div>
+
+
+<h1 class="title1" onclick="myFunction(); document.getElementById('myUL').style.visibility = 'hidden'; document.getElementById('topbutton').style.visibility = 'visible';">Real Time<br><span style="color: #3EB080">Crypto</span> Data</h1>
+
+<input class="form-control email1" placeholder="  search Coins" id="myInput" onkeyup="myFunction(); document.getElementById('myUL').style.visibility = 'visible'; document.getElementById('topbutton').style.visibility = 'hidden';">
+
+<a href="#" id="topbutton" class="myButton">View Top Currencies</a>
+
+<style>
+.myButton {
+    text-decoration: none;
+    position: absolute;
+    top: 65%;
+    left: 21%;
+	background:linear-gradient(to bottom, #497dd6 5%, #00bf9f 100%);
+	background-color:#497dd6;
+	border-radius:28px;
+	
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	padding:16px 31px;
+	text-decoration:none;
+}
+
+.myButton:hover {
+    text-decoration: none;
+	background:linear-gradient(to bottom, #00bf9f 5%, #497dd6 100%);
+	background-color:#00bf9f;
+	color: white;
+}
+
+@media (max-width: 991.98px) {
+.myButton {
+    top: 42%;
+    left: 8%;
+}
+}
+
+</style>
+
+<ul id="myUL" style="visibility: hidden;">
+  <li><a href="btc.html"> <img style="vertical-align: baseline;" src="logos/btc.png" width="17" height="17"> Bitcoin - BTC</a></li>
+  <li><a href="#"><img style="vertical-align: baseline;" src="logos/eth.png" width="18" height="18"> Ethereum - ETH</a></li>
+  <li><a href="#"><img style="vertical-align: baseline;" src="logos/xmr.png" width="18" height="18"> Monero - XMR</a></li>
+  <li><a href="#"><img style="vertical-align: baseline;" src="logos/doge.png" width="18" height="18"> DogeCoin - DOGE</a></li>
+  <li><a href="#"><img style="vertical-align: baseline;" src="logos/ltc.png" width="18" height="18"> LiteCoin - LTC</a></li>
+  <li><a href="#"><img style="vertical-align: baseline;" src="logos/ada.png" width="18" height="18"> Cardano - ADA</a></li>
+  <li><a href="#"><img style="vertical-align: baseline;" src="logos/bnb.png" width="18" height="18"> BinanceCoin - BNB</a></li>
+  <li><a href="#"><img style="vertical-align: baseline;" src="logos/tether.png" width="18" height="18"> Tether - USDT</a></li>
+  <li><a href="#"><img style="vertical-align: baseline;" src="logos/trx.png" width="18" height="18"> Tron - TRX</a></li>
+  <li><a href="#"><img style="vertical-align: baseline;" src="logos/hnt.png" width="18" height="18"> Helium - HNT</a></li>
+  <li><a href="#"><img style="vertical-align: baseline;" src="logos/btt.png" width="18" height="18"> BitTorrent - BTT</a></li>
+  <li><a href="#"><img style="vertical-align: baseline;" src="logos/dot.png" width="18" height="18"> Polkadot - DOT</a></li>
+  <li><a href="#"><img style="vertical-align: baseline;" src="logos/xlm.png" width="18" height="18"> Stellar - XLM</a></li>
+  <li><a href="#"><img style="vertical-align: baseline;" src="logos/xrp.png" width="18" height="18"> XRP - XRP</a></li>
+  <li><a href="#"><img style="vertical-align: baseline;" src="logos/bch.png" width="18" height="18"> BitcoinCash - BCH</a></li>
+  <li><a href="#"><img style="vertical-align: baseline;" src="logos/matic.png" width="18" height="18"> Polyglon - MATIC</a></li>
+</ul>
+
+<script>
+function myFunction() {
+    document.getElementById('myUL').style.visibility = 'visible';
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+
+<style>
+
+.worldimage{
+ width: 100%;
+}
+
+@media (max-width: 991.98px) {
+.worldimage{
+ width: 130%;
+}
+body { overflow: hidden; /* Hide scrollbars */ }
+}
+
+.containerdevice {
+  position: absolute;
+  top: 21%;
+  left: 60%;
+  pointer-events: none;
+  user-select: none;
+}
+@media (max-width: 991.98px) {
+.containerdevice {
+  position: absolute;
+  top: 40%;
+  right: -14%;
+  pointer-events: none;
+  user-select: none;
+}
+}
+
+.containerbig {
+  position: relative;
+  height: 100%;
+  text-align: left;
+  color: white;
+  text-align: left;
+  pointer-events: none;
+  user-select: none;
+}
+
+.title1 {
+  position: absolute;
+  top: 35%;
+  left: 21%;
+  width: 450px;
+  border-radius: 25px;
+  height: 40px;
+  color: #004d9a;
+  font-size: 50px;
+  line-height: 150%;
+}
+
+@media (max-width: 991.98px) {
+.title1 {
+  position: absolute;
+  top: 14%;
+  left: 8%;
+  width: 450px;
+  border-radius: 25px;
+  height: 40px;
+  color: #004d9a;
+}
+}
+
+.email1 {
+  position: absolute;
+  top: 56%;
+  left: 21%;
+  width: 450px;
+  border-radius: 25px;
+  height: 40px;
+}
+
+@media (max-width: 991.98px) {
+.email1 {
+  position: absolute;
+  top: 34%;
+  left: 8%;
+  width: 80%;
+  border-radius: 25px;
+}
+}
+
+
+</style>
+
+
+
+</body>
+
+
+</html>
